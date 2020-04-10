@@ -60,13 +60,13 @@ class Point {
 
 class Canvas {
 
-	List<com.company.Point> points;
+	List<Point> points;
 
 	Canvas(){
 		points = new ArrayList<>();
 	}
 
-	public boolean addPoint(com.company.Point point){
+	public boolean addPoint(Point point){
 		return points.add(point);
 	}
 
