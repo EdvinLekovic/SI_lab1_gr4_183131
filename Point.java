@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Point {
 	String id;
 	double x,y;
@@ -32,16 +35,16 @@ class Point {
 
 	public void move (char xDirection, char yDirection) {
 		//TODO
-        if(xDirection=="L"){
+        if(xDirection=='L'){
             x--;
         }
-        if(xDirection=="R"){
+        if(xDirection=='R'){
             x++;
         }
-        if(yDirection=="U"){
+        if(yDirection=='U'){
             y++;
         }
-        if(yDirection=="D"){
+        if(yDirection=='D'){
             y--;
         }
 	}
@@ -51,6 +54,29 @@ class Point {
         System.out.println(String.format("x = %f y = %f",x,y));
 	}
 
+
+
+}
+
+class Canvas {
+
+	List<com.company.Point> points;
+
+	Canvas(){
+		points = new ArrayList<>();
+	}
+
+	public boolean addPoint(com.company.Point point){
+		return points.add(point);
+	}
+
+	public com.company.Point removePoint(int index){
+		return points.remove(index);
+	}
+
+	public void moveAllPoints(char xDirection,char yDirection){
+		points.forEach(p ->p.move(xDirection,yDirection));
+	}
 
 
 }
