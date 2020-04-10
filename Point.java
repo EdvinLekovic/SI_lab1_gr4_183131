@@ -14,6 +14,22 @@ class Point {
 
 	//TODO setters and getters
 
+	public void set_x(double x){
+		this.x = x;
+	}
+
+	public void set_y(double y){
+		this.y = y;
+	}
+
+	public double get_x(){
+		return x;
+	}
+
+	public double get_y(){
+		return y;
+	}
+
 	public void move (char xDirection, char yDirection) {
 		//TODO
         if(xDirection=="L"){
